@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Games - Ultimate Gaming Collection</title>
-    <meta name="description" content="Play the best card games online for free. Poker, Solitaire, UNO and more card games all in one place.">
-    <meta name="keywords" content="游戏, 小游戏, 网页小游戏, card games, poker, solitaire, online card games">
+    <title>Card Games</title>
+    <meta name="description" content="Play the best online games for free. Card games, girls games, action games, car games, adventure and basketball games all in one place.">
+    <meta name="keywords" content="Action games, online games, free gamesCard games, girls games, car games, adventure games, basketball games">
     <link rel="canonical" href="https://bjsrkyyp.com/card.html">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -46,73 +46,31 @@
             transform: scale(1.05);
         }
         
-        .games-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 2px solid var(--primary);
-            height: 600px;
-        }
-        
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .glow-text {
-            text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
-        }
-        
         .game-card {
-            background-color: var(--bg-light);
-            border: 2px solid transparent;
+            border: 3px solid var(--primary);
             border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 0 20px rgba(108, 43, 217, 0.3);
             transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .game-card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
-            z-index: -1;
-            border-radius: 14px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
         
         .game-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .game-card:hover::before {
-            opacity: 1;
-        }
-        
-        .game-info {
-            padding: 24px;
-            background-color: var(--bg-light);
-            border-radius: 12px;
-            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(108, 43, 217, 0.5);
         }
         
         .play-btn {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
-            border-radius: 8px;
             transition: all 0.3s ease;
         }
         
         .play-btn:hover {
             opacity: 0.9;
             transform: scale(1.05);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
         }
     </style>
 </head>
@@ -121,108 +79,74 @@
         <!-- Header -->
         <header class="text-center mb-6">
             <h1 class="text-3xl md:text-5xl font-bold mb-2">Card Games</h1>
-            <p class="text-lg text-gray-300 mb-6">Ultimate Gaming Collection</p>
+            <!-- <p class="text-lg text-gray-300 mb-6">Ultimate Gaming Collection</p> -->
             <a href="index.html" class="back-btn inline-block px-6 py-2 text-white font-medium mb-6">← Back to Home</a>
         </header>
         
-        <!-- Game Information -->
-        <div class="game-info mb-8">
-            <h2 class="text-2xl font-bold mb-3 glow-text">Featured Card Game: Solitaire Classic</h2>
-            <p class="text-gray-300 mb-4">
-                Classic Solitaire is one of the most popular card games of all time. Also known as Klondike, this game requires strategy, patience, and a bit of luck. Try to move all cards to the foundation piles, building up in suit from Ace to King.
-            </p>
-            <div class="flex flex-wrap gap-4 mb-4">
-                <div class="bg-gray-800 px-3 py-1 rounded-full text-sm">Single Player</div>
-                <div class="bg-gray-800 px-3 py-1 rounded-full text-sm">Easy to Learn</div>
-                <div class="bg-gray-800 px-3 py-1 rounded-full text-sm">Strategic</div>
-                <div class="bg-gray-800 px-3 py-1 rounded-full text-sm">Classic</div>
-            </div>
-        </div>
-        
-        <!-- Games Container -->
-        <div class="games-container mb-10">
-            <iframe src="https://www.crazygames.com/t/card" allow="fullscreen" loading="lazy" title="Card Games"></iframe>
-        </div>
-        
-        <!-- More Games -->
-        <h2 class="text-2xl font-bold mb-6 text-center glow-text">More Card Games</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div class="game-card p-4">
-                <div class="aspect-w-16 aspect-h-9 mb-4">
-                    <img src="/api/placeholder/400/225" alt="Poker Game" class="rounded-lg w-full h-48 object-cover">
-                </div>
-                <h3 class="text-xl font-bold mb-2">Texas Hold'em Poker</h3>
-                <p class="text-gray-300 mb-4">The world's most popular poker variant. Play against AI opponents or challenge your friends.</p>
-                <button class="play-btn w-full py-2 text-white font-medium" onclick="loadGame('poker')">Play Now</button>
+        <!-- Game Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Game Card 1 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Solitaire</h2>
+                <p class="text-gray-300 mb-4">The classic card game where you arrange cards in descending order and alternating colors. A timeless favorite for all ages.</p>
+                <a href="https://www.crazygames.com/game/solitaire" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
             </div>
             
-            <div class="game-card p-4">
-                <div class="aspect-w-16 aspect-h-9 mb-4">
-                    <img src="/api/placeholder/400/225" alt="UNO Game" class="rounded-lg w-full h-48 object-cover">
-                </div>
-                <h3 class="text-xl font-bold mb-2">UNO Online</h3>
-                <p class="text-gray-300 mb-4">The classic color and number matching card game that's fun for the whole family.</p>
-                <button class="play-btn w-full py-2 text-white font-medium" onclick="loadGame('uno')">Play Now</button>
+            <!-- Game Card 2 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Spider Solitaire</h2>
+                <p class="text-gray-300 mb-4">A challenging variation of solitaire where you arrange cards in descending order of the same suit. Test your strategic thinking.</p>
+                <a href="https://www.crazygames.com/game/spider-solitaire" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
             </div>
             
-            <div class="game-card p-4">
-                <div class="aspect-w-16 aspect-h-9 mb-4">
-                    <img src="/api/placeholder/400/225" alt="Spider Solitaire" class="rounded-lg w-full h-48 object-cover">
-                </div>
-                <h3 class="text-xl font-bold mb-2">Spider Solitaire</h3>
-                <p class="text-gray-300 mb-4">A challenging solitaire variant where you build descending suit sequences.</p>
-                <button class="play-btn w-full py-2 text-white font-medium" onclick="loadGame('spider')">Play Now</button>
+            <!-- Game Card 3 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">UNO Online</h2>
+                <p class="text-gray-300 mb-4">Play the popular card game UNO online against computer opponents. Match colors and numbers to be the first to get rid of all your cards.</p>
+                <a href="https://www.crazygames.com/game/uno-online" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 4 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Poker</h2>
+                <p class="text-gray-300 mb-4">Test your luck and strategy in this classic poker game. Compete against computer opponents and try to build the best hand.</p>
+                <a href="https://www.crazygames.com/game/poker" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 5 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Blackjack</h2>
+                <p class="text-gray-300 mb-4">Try to beat the dealer by getting a hand value closer to 21 without going over in this classic casino card game.</p>
+                <a href="https://www.crazygames.com/game/blackjack" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 6 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">More Games</h2>
+                <p class="text-gray-300 mb-4">Discover more exciting card games on CrazyGames. From classic solitaire to multiplayer poker, there's something for everyone.</p>
+                <a href="https://www.crazygames.com/c/card" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Browse All</a>
             </div>
         </div>
         
-        <!-- Game Overview -->
-        <div class="bg-gray-900 rounded-lg p-6 mb-10">
-            <h2 class="text-2xl font-bold mb-4">About Card Games</h2>
-            <p class="text-gray-300 mb-4">
-                Card games have been entertaining people for centuries, with endless variations ranging from simple matching games to complex strategy games. They're perfect for players of all ages and skill levels.
-            </p>
-            <p class="text-gray-300 mb-4">
-                Our collection features classic card games like Solitaire, Poker, Hearts, and Bridge, as well as modern favorites like UNO and specialty deck games. Whether you're looking for single-player challenges or multiplayer competitions, we've got card games that will keep you entertained for hours.
-            </p>
-            <h3 class="text-xl font-bold mb-2">Benefits of Playing Card Games</h3>
-            <ul class="list-disc list-inside text-gray-300 mb-4 pl-4">
-                <li>Improves memory and concentration</li>
-                <li>Enhances strategic thinking and planning</li>
-                <li>Teaches probability and risk assessment</li>
-                <li>Provides entertainment anywhere, anytime</li>
-                <li>Suitable for short gaming sessions</li>
-            </ul>
+        <!-- Alternative Game Sites -->
+        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 glow-text">More Card Games</h2>
+            <p class="text-gray-300 mb-4">Try these other great sites for card games:</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://www.kongregate.com/games/top/card" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Kongregate</a>
+                <a href="https://www.y8.com/categories/card" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Y8</a>
+                <a href="https://www.miniclip.com/games/en/" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Miniclip</a>
+            </div>
         </div>
     </div>
     
     <!-- Footer -->
     <footer class="mt-10 py-4 bg-gray-900">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2025 Ultimate Gaming Collection. All rights reserved.</p>
-            <p class="text-gray-500 mt-2">bjsrkyyp.com</p>
+            <p class="text-gray-400"><a href="https://beian.miit.gov.cn" rel=nofollow>渝ICP备2025054030号</a>
+                <p class="text-gray-400">Contact Us:961674004@qq.com.</p>    
+            </p>
         </div>
     </footer>
-    
-    <script>
-        function loadGame(gameType) {
-            const iframe = document.querySelector('.games-container iframe');
-            switch(gameType) {
-                case 'poker':
-                    iframe.src = "https://www.crazygames.com/game/governor-of-poker-3";
-                    break;
-                case 'uno':
-                    iframe.src = "https://www.crazygames.com/game/uno-online";
-                    break;
-                case 'spider':
-                    iframe.src = "https://www.crazygames.com/game/spider-solitaire";
-                    break;
-                default:
-                    iframe.src = "https://www.crazygames.com/t/card";
-            }
-            
-            // Scroll to the iframe
-            iframe.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    </script>
 </body>
 </html>

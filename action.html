@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Action Games - 爱玩游戏大全</title>
-    <meta name="description" content="Play the best action games online for free. Fighting, shooting, platform games and more thrilling action adventures.">
-    <meta name="keywords" content="游戏, 小游戏, 网页小游戏, H5游戏, action games, online action games, fighting games">
+    <title>Action Games</title>
+    <meta name="description" content="Play the best online games for free. Card games, girls games, action games, car games, adventure and basketball games all in one place.">
+    <meta name="keywords" content="Action games, online games, free gamesCard games, girls games, car games, adventure games, basketball games">
     <link rel="canonical" href="https://bjsrkyyp.com/action.html">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -48,25 +48,27 @@
             transform: scale(1.05);
         }
         
-        .game-frame {
+        .game-card {
             border: 3px solid var(--primary);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(255, 61, 0, 0.3);
+            transition: all 0.3s ease;
         }
         
-        .loader {
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 5px solid var(--accent);
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 61, 0, 0.5);
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .play-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
         }
         
         .glow-text {
@@ -87,36 +89,60 @@
             </a>
         </header>
         
-        <!-- Game Description -->
-        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4 glow-text">About Action Games</h2>
-            <p class="text-gray-300 mb-4">
-                Action games are fast-paced, reflex-testing experiences that challenge your coordination and quick thinking. From fighting games to shooters and platformers, this category offers thrilling experiences for gamers who crave excitement.
-            </p>
-            <p class="text-gray-300">
-                Our collection features a variety of action-packed games with different gameplay styles. Test your skills, battle enemies, collect power-ups, and conquer challenging levels in these adrenaline-pumping adventures.
-            </p>
-        </div>
-        
-        <!-- Game Frame -->
-        <div class="relative mb-8">
-            <div id="loading" class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 z-10">
-                <div class="loader"></div>
-                <p class="ml-4 text-xl">Loading games...</p>
+        <!-- Game Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Game Card 1 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Stick Fight</h2>
+                <p class="text-gray-300 mb-4">A physics-based fighting game where you control stick figures in epic battles. Use various weapons and special moves to defeat your opponents.</p>
+                <a href="https://www.crazygames.com/game/stick-fight" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
             </div>
-            <iframe id="gameFrame" src="https://www.crazygames.com/c/action" class="game-frame w-full h-screen md:h-[80vh]" frameborder="0" allowfullscreen></iframe>
+            
+            <!-- Game Card 2 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Minecraft Classic</h2>
+                <p class="text-gray-300 mb-4">The original version of Minecraft where you can build, explore, and survive in a blocky world. Create your own adventures and structures.</p>
+                <a href="https://www.crazygames.com/game/minecraft-classic" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 3 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Subway Surfers</h2>
+                <p class="text-gray-300 mb-4">An endless runner game where you dodge obstacles, collect coins, and perform stunts while being chased by a security guard.</p>
+                <a href="https://www.crazygames.com/game/subway-surfers" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 4 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Temple Run 2</h2>
+                <p class="text-gray-300 mb-4">Run, jump, and slide through an ancient temple while collecting coins and avoiding obstacles in this endless runner game.</p>
+                <a href="https://www.crazygames.com/game/temple-run-2" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 5 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Slope</h2>
+                <p class="text-gray-300 mb-4">Control a ball rolling down a slope, avoiding obstacles and collecting points in this challenging 3D game.</p>
+                <a href="https://www.crazygames.com/game/slope" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 6 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">More Games</h2>
+                <p class="text-gray-300 mb-4">Discover more exciting action games on CrazyGames. From fighting to platforming, there's something for everyone.</p>
+                <a href="https://www.crazygames.com/c/action" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Browse All</a>
+            </div>
         </div>
         
-        <!-- Game Tips -->
+        <!-- Alternative Game Sites -->
         <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4 glow-text">Action Gaming Tips</h2>
-            <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                <li>Focus on mastering the core controls before trying more advanced techniques</li>
-                <li>Watch for patterns in enemy movements and attacks</li>
-                <li>Don't forget to use power-ups and special abilities at strategic moments</li>
-                <li>Practice makes perfect - many action games require quick reflexes that improve with play</li>
-                <li>Take breaks if you get frustrated - coming back with fresh eyes helps overcome challenging sections</li>
-            </ul>
+            <h2 class="text-2xl font-bold mb-4 glow-text">More Action Games</h2>
+            <p class="text-gray-300 mb-4">Try these other great sites for action games:</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://www.kongregate.com/games/top/action" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Kongregate</a>
+                <a href="https://www.y8.com/categories/action" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Y8</a>
+                <a href="https://www.miniclip.com/games/en/" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Miniclip</a>
+            </div>
         </div>
     </div>
     
@@ -124,12 +150,9 @@
     <footer class="mt-20 py-6 bg-gray-900">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400"><a href="https://beian.miit.gov.cn" rel=nofollow>渝ICP备2025054030号</a>
-            <p class="text-gray-400">Contact Us：961674004@qq.com。</p> 
+                <p class="text-gray-400">Contact Us:961674004@qq.com.</p>    
+            </p>
         </div>
     </footer>
-    
-    <script>
-        // Loading animation
-        window.addEventListener('load', function() {
-            document.getElementById('gameFrame').onload = function() {
-                
+</body>
+</html>

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball Games - 爱玩游戏大全</title>
-    <meta name="description" content="Play the best basketball games online for free. Shoot hoops, perfect your dunk, and become a basketball star.">
-    <meta name="keywords" content="游戏, 小游戏, 网页小游戏, H5游戏, basketball games, sports games, ball games">
+    <title>Basketball Games</title>
+    <meta name="description" content="Play the best online games for free. Card games, girls games, action games, car games, adventure and basketball games all in one place.">
+    <meta name="keywords" content="Action games, online games, free gamesCard games, girls games, car games, adventure games, basketball games">
     <link rel="canonical" href="https://bjsrkyyp.com/basketball.html">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #FF9500;
-            --secondary: #1D39C4;
-            --accent: #52C41A;
+            --primary: #6C2BD9;
+            --secondary: #FF2D55;
+            --accent: #00E5FF;
             --bg-dark: #120E29;
             --bg-light: #1E1A3C;
             --text: #ffffff;
@@ -23,8 +23,8 @@
             background-color: var(--bg-dark);
             color: var(--text);
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(255, 149, 0, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(29, 57, 196, 0.2) 0%, transparent 50%);
+                radial-gradient(circle at 25% 25%, rgba(108, 43, 217, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 45, 85, 0.2) 0%, transparent 50%);
         }
         
         h1 {
@@ -32,15 +32,13 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 20px rgba(255, 149, 0, 0.5);
+            text-shadow: 0 0 20px rgba(108, 43, 217, 0.5);
         }
         
         .back-btn {
             background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 24px;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
         }
         
         .back-btn:hover {
@@ -48,87 +46,107 @@
             transform: scale(1.05);
         }
         
-        .game-frame {
+        .game-card {
             border: 3px solid var(--primary);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 149, 0, 0.3);
+            box-shadow: 0 0 20px rgba(108, 43, 217, 0.3);
+            transition: all 0.3s ease;
         }
         
-        .loader {
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 5px solid var(--accent);
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 43, 217, 0.5);
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .play-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
         }
         
         .glow-text {
-            text-shadow: 0 0 10px rgba(255, 149, 0, 0.7);
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
         }
     </style>
 </head>
 <body class="min-h-screen">
     <div class="container mx-auto px-4 py-8">
         <!-- Header -->
-        <header class="flex flex-col md:flex-row justify-between items-center mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4 md:mb-0">Basketball Games</h1>
-            <a href="index.html" class="back-btn px-6 py-3 rounded-full text-white font-medium flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-                </svg>
-                Back to Home
-            </a>
+        <header class="text-center mb-6">
+            <h1 class="text-3xl md:text-5xl font-bold mb-2">Basketball Games</h1>
+            <!-- <p class="text-lg text-gray-300 mb-6">Ultimate Gaming Collection</p> -->
+            <a href="index.html" class="back-btn inline-block px-6 py-2 text-white font-medium mb-6">← Back to Home</a>
         </header>
         
-        <!-- Game Frame -->
-        <div class="relative mb-8">
-            <div id="loading" class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 z-10">
-                <div class="loader"></div>
-                <p class="ml-4 text-xl">Loading games...</p>
+        <!-- Game Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Game Card 1 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Basketball Stars</h2>
+                <p class="text-gray-300 mb-4">Compete in intense 1v1 street basketball matches. Show off your skills with amazing dunks and three-pointers.</p>
+                <a href="https://www.crazygames.com/game/basketball-stars" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
             </div>
-            <iframe id="gameFrame" src="https://play.xiangqi.com" class="game-frame w-full h-screen md:h-[80vh]" frameborder="0" allowfullscreen></iframe>
+            
+            <!-- Game Card 2 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Street Basketball</h2>
+                <p class="text-gray-300 mb-4">Play street basketball with unique characters and special moves. Master the art of street ball and become a legend.</p>
+                <a href="https://www.crazygames.com/game/street-basketball" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 3 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">3D Basketball</h2>
+                <p class="text-gray-300 mb-4">Experience basketball in stunning 3D graphics. Shoot hoops from different angles and challenge your friends.</p>
+                <a href="https://www.crazygames.com/game/3d-basketball" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 4 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Free Throw Master</h2>
+                <p class="text-gray-300 mb-4">Perfect your free throw technique in this challenging game. Time your shots perfectly to score every time.</p>
+                <a href="https://www.crazygames.com/game/free-throw-master" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 5 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Basketball Challenge</h2>
+                <p class="text-gray-300 mb-4">Take on various basketball challenges and improve your skills. From shooting contests to trick shots, test your abilities.</p>
+                <a href="https://www.crazygames.com/game/basketball-challenge" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 6 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">More Games</h2>
+                <p class="text-gray-300 mb-4">Discover more exciting basketball games on CrazyGames. From street ball to NBA-style games, there's something for everyone.</p>
+                <a href="https://www.crazygames.com/c/basketball" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Browse All</a>
+            </div>
         </div>
         
-        <!-- Game Tips -->
+        <!-- Alternative Game Sites -->
         <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4 glow-text">Basketball Gaming Tips</h2>
-            <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                <li>Perfect your timing - most basketball games require precise timing for successful shots</li>
-                <li>Learn the strengths and weaknesses of different players or positions</li>
-                <li>Practice makes perfect - spend time perfecting your free throws and three-pointers</li>
-                <li>In team games, don't forget about defense - blocks and steals can be just as valuable as scoring</li>
-                <li>For arcade-style games, look for power-ups and special moves that can give you an advantage</li>
-            </ul>
+            <h2 class="text-2xl font-bold mb-4 glow-text">More Basketball Games</h2>
+            <p class="text-gray-300 mb-4">Try these other great sites for basketball games:</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://www.kongregate.com/games/top/basketball" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Kongregate</a>
+                <a href="https://www.y8.com/categories/basketball" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Y8</a>
+                <a href="https://www.miniclip.com/games/en/" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Miniclip</a>
+            </div>
         </div>
     </div>
     
     <!-- Footer -->
-    <footer class="mt-20 py-6 bg-gray-900">
+    <footer class="mt-10 py-4 bg-gray-900">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400"><a href="https://beian.miit.gov.cn" rel=nofollow>渝ICP备2025054030号</a>
-            <p class="text-gray-400">Contact Us：961674004@qq.com。</p> 
+                <p class="text-gray-400">Contact Us:961674004@qq.com.</p>    
+            </p>
         </div>
     </footer>
-    
-    <script>
-        // Loading animation
-        window.addEventListener('load', function() {
-            document.getElementById('gameFrame').onload = function() {
-                document.getElementById('loading').style.display = 'none';
-            };
-            
-            // Fallback in case iframe takes too long to load
-            setTimeout(function() {
-                document.getElementById('loading').style.display = 'none';
-            }, 5000);
-        });
-    </script>
 </body>
 </html>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure Games - 爱玩游戏大全</title>
-    <meta name="description" content="Play the best adventure and escape games online for free. Explore, solve puzzles, and embark on exciting journeys.">
-    <meta name="keywords" content="游戏, 小游戏, 网页小游戏, H5游戏, adventure games, escape games, puzzle games">
+    <title>Adventure Games</title>
+    <meta name="description" content="Play the best online games for free. Card games, girls games, action games, car games, adventure and basketball games all in one place.">
+    <meta name="keywords" content="Action games, online games, free gamesCard games, girls games, car games, adventure games, basketball games">
     <link rel="canonical" href="https://bjsrkyyp.com/adventure.html">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -23,7 +23,7 @@
             background-color: var(--bg-dark);
             color: var(--text);
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(47, 84, 235, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 25% 25%, rgba(22, 37, 95, 0.2) 0%, transparent 50%),
                 radial-gradient(circle at 75% 75%, rgba(114, 46, 209, 0.2) 0%, transparent 50%);
         }
         
@@ -48,25 +48,27 @@
             transform: scale(1.05);
         }
         
-        .game-frame {
+        .game-card {
             border: 3px solid var(--primary);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(47, 84, 235, 0.3);
+            transition: all 0.3s ease;
         }
         
-        .loader {
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top: 5px solid var(--accent);
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(47, 84, 235, 0.5);
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .play-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
         }
         
         .glow-text {
@@ -87,36 +89,60 @@
             </a>
         </header>
         
-        <!-- Game Description -->
-        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4 glow-text">About Adventure Games</h2>
-            <p class="text-gray-300 mb-4">
-                Adventure games take you on exciting journeys filled with exploration, discovery, and challenging puzzles. From room escapes to epic quests, these games test your problem-solving skills and creativity.
-            </p>
-            <p class="text-gray-300">
-                Our collection features escape room challenges, puzzle adventures, and story-driven experiences that will keep you engaged for hours. Uncover mysteries, find hidden objects, and solve clever puzzles to progress through these immersive adventures.
-            </p>
-        </div>
-        
-        <!-- Game Frame -->
-        <div class="relative mb-8">
-            <div id="loading" class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 z-10">
-                <div class="loader"></div>
-                <p class="ml-4 text-xl">Loading games...</p>
+        <!-- Game Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- Game Card 1 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Escape Room</h2>
+                <p class="text-gray-300 mb-4">A challenging escape room game where you need to find clues, solve puzzles, and escape before time runs out.</p>
+                <a href="https://www.crazygames.com/game/escape-room" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
             </div>
-            <iframe id="gameFrame" src="https://www.crazygames.com/t/escape" class="game-frame w-full h-screen md:h-[80vh]" frameborder="0" allowfullscreen></iframe>
+            
+            <!-- Game Card 2 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Adventure Quest</h2>
+                <p class="text-gray-300 mb-4">Embark on an epic quest through magical lands, battle monsters, and collect treasures in this RPG adventure.</p>
+                <a href="https://www.crazygames.com/game/adventure-quest" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 3 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Treasure Hunt</h2>
+                <p class="text-gray-300 mb-4">Explore ancient ruins, solve puzzles, and find hidden treasures in this exciting adventure game.</p>
+                <a href="https://www.crazygames.com/game/treasure-hunt" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 4 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Lost in Space</h2>
+                <p class="text-gray-300 mb-4">Navigate through space, avoid asteroids, and discover new planets in this sci-fi adventure game.</p>
+                <a href="https://www.crazygames.com/game/lost-in-space" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 5 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">Mystery Mansion</h2>
+                <p class="text-gray-300 mb-4">Explore a haunted mansion, solve mysteries, and uncover the dark secrets hidden within its walls.</p>
+                <a href="https://www.crazygames.com/game/mystery-mansion" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Play Now</a>
+            </div>
+            
+            <!-- Game Card 6 -->
+            <div class="game-card bg-gray-800 bg-opacity-50 p-6">
+                <h2 class="text-2xl font-bold mb-2 glow-text">More Games</h2>
+                <p class="text-gray-300 mb-4">Discover more exciting adventure games on CrazyGames. From escape rooms to epic quests, there's something for everyone.</p>
+                <a href="https://www.crazygames.com/c/adventure" target="_blank" class="play-btn inline-block px-6 py-2 rounded-full text-white font-medium">Browse All</a>
+            </div>
         </div>
         
-        <!-- Game Tips -->
+        <!-- Alternative Game Sites -->
         <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4 glow-text">Adventure Gaming Tips</h2>
-            <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                <li>Examine every object carefully - small details can be important clues</li>
-                <li>Take notes on puzzles and important information you discover</li>
-                <li>Try combining items in your inventory to create new tools</li>
-                <li>If you get stuck, take a break and come back with fresh eyes</li>
-                <li>Remember that puzzles often have logical solutions based on clues in the environment</li>
-            </ul>
+            <h2 class="text-2xl font-bold mb-4 glow-text">More Adventure Games</h2>
+            <p class="text-gray-300 mb-4">Try these other great sites for adventure games:</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://www.kongregate.com/games/top/adventure" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Kongregate</a>
+                <a href="https://www.y8.com/categories/adventure" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Y8</a>
+                <a href="https://www.miniclip.com/games/en/" target="_blank" class="play-btn px-6 py-2 rounded-full text-white font-medium">Miniclip</a>
+            </div>
         </div>
     </div>
     
@@ -124,22 +150,9 @@
     <footer class="mt-20 py-6 bg-gray-900">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400"><a href="https://beian.miit.gov.cn" rel=nofollow>渝ICP备2025054030号</a>
-            <p class="text-gray-400">Contact Us：961674004@qq.com。</p> 
+            <p class="text-gray-400">Contact Us:961674004@qq.com.</p>    
+        </p>
         </div>
     </footer>
-    
-    <script>
-        // Loading animation
-        window.addEventListener('load', function() {
-            document.getElementById('gameFrame').onload = function() {
-                document.getElementById('loading').style.display = 'none';
-            };
-            
-            // Fallback in case iframe takes too long to load
-            setTimeout(function() {
-                document.getElementById('loading').style.display = 'none';
-            }, 5000);
-        });
-    </script>
 </body>
 </html>
