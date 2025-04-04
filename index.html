@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiWan Gaming Collection - A Game Site</title>
+    <meta name="description" content="Play the best online games for free. Card games, girls games, action, car games, adventure and basketball games all in one place.">
+    <meta name="keywords" content="游戏, 小游戏, 网页小游戏, H5游戏, online games, free games">
+    <link rel="canonical" href="https://bjsrkyyp.com/index.html">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GH2K42Q3G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GH2K42Q3G0');
+</script>
+    <style>
+        :root {
+            --primary: #6C2BD9;
+            --secondary: #FF2D55;
+            --accent: #00E5FF;
+            --bg-dark: #120E29;
+            --bg-light: #1E1A3C;
+            --text: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(108, 43, 217, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 45, 85, 0.2) 0%, transparent 50%);
+        }
+        
+        .game-card {
+            background-color: var(--bg-light);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            z-index: -1;
+            border-radius: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .game-card:hover::before {
+            opacity: 1;
+        }
+        
+        h1 {
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(108, 43, 217, 0.5);
+        }
+        
+        .search-box {
+            background-color: var(--bg-light);
+            border: 2px solid var(--primary);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus-within {
+            box-shadow: 0 0 15px rgba(108, 43, 217, 0.7);
+            border-color: var(--accent);
+        }
+        
+        .search-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+        
+        .category-btn {
+            background-color: var(--bg-light);
+            border: 2px solid rgba(108, 43, 217, 0.5);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .category-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-btn:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .category-btn:hover {
+            border-color: transparent;
+            color: white;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+        }
+        
+        @media (max-width: 640px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">AiWan Gaming Collection</h1>
+            <p class="text-lg text-gray-300">A Game Site</p>
+        </header>
+        
+        <!-- Search Box -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="flex search-box p-1">
+                <input id="searchInput" type="text" placeholder="Search games..." class="flex-grow px-4 py-2 bg-transparent outline-none text-white">
+                <button id="searchButton" class="search-btn px-6 py-2 text-white font-medium">Search</button>
+            </div>
+        </div>
+        
+        <!-- Categories -->
+        <h2 class="text-2xl font-bold mb-6 text-center glow-text">Game Categories</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12 categories-grid">
+            <a href="card.html" class="category-btn flex items-center justify-center p-4 font-medium text-lg">Card</a>
+            <a href="girls.html" class="category-btn flex items-center justify-center p-4 font-medium text-lg">Girls</a>
+            <a href="action.html" class="category-btn flex items-center justify-center p-4 font-medium text-lg">Action</a>
+            <a href="car.html" class="category-btn flex items-center justify-center p-4 font-medium text-lg">Car</a>
+            <a href="adventure.html" class="category-btn flex items-center justify-center p-4 font-medium text-lg">Adventure</a>
+            <a href="basketball.html" class="category-btn flex items-center justify-center p-4 font-medium text-lg">Basketball</a>
+        </div>
+        
+        <!-- Featured Games -->
+        <h2 class="text-2xl font-bold mb-6 text-center glow-text">Featured Games</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="game-card p-4">
+                <div class="aspect-w-16 aspect-h-9 mb-4">
+                    <img src="/api/placeholder/400/225" alt="Card Game" class="rounded-lg w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2">Top Card Games</h3>
+                <p class="text-gray-300 mb-4">Explore our collection of the best card games online.</p>
+                <a href="card.html" class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all">Play Now</a>
+            </div>
+            
+            <div class="game-card p-4">
+                <div class="aspect-w-16 aspect-h-9 mb-4">
+                    <img src="/api/placeholder/400/225" alt="Action Game" class="rounded-lg w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2">Action Adventures</h3>
+                <p class="text-gray-300 mb-4">Jump into exciting action-packed games with amazing graphics.</p>
+                <a href="action.html" class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all">Play Now</a>
+            </div>
+            
+            <div class="game-card p-4">
+                <div class="aspect-w-16 aspect-h-9 mb-4">
+                    <img src="/api/placeholder/400/225" alt="Car Game" class="rounded-lg w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2">Racing Thrills</h3>
+                <p class="text-gray-300 mb-4">Experience the adrenaline of high-speed car racing games.</p>
+                <a href="car.html" class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all">Play Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mt-20 py-6 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400"><a href="https://beian.miit.gov.cn" rel=nofollow>渝ICP备2025054030号</a>
+            <p class="text-gray-400">Contact Us：961674004@qq.com。</p>    
+</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Search functionality
+        document.getElementById('searchButton').addEventListener('click', function() {
+            performSearch();
+        });
+        
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm.includes('card')) {
+                window.location.href = 'card.html';
+            } else if (searchTerm.includes('girl') || searchTerm.includes('beauty')) {
+                window.location.href = 'girls.html';
+            } else if (searchTerm.includes('action')) {
+                window.location.href = 'action.html';
+            } else if (searchTerm.includes('car') || searchTerm.includes('racing')) {
+                window.location.href = 'car.html';
+            } else if (searchTerm.includes('adventure') || searchTerm.includes('escape')) {
+                window.location.href = 'adventure.html';
+            } else if (searchTerm.includes('basketball') || searchTerm.includes('ball')) {
+                window.location.href = 'basketball.html';
+            } else {
+                alert('No matching games found. Try searching for: card, girls, action, car, adventure, or basketball');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Games - 爱玩游戏大全</title>
+    <meta name="description" content="Play the best games for girls online. Fashion, makeup, decoration, and beauty games all in one place.">
+    <meta name="keywords" content="游戏, 小游戏, 网页小游戏, H5游戏, girls games, fashion games, beauty games">
+    <link rel="canonical" href="https://bjsrkyyp.com/girls.html">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF41B4;
+            --secondary: #9D4EDD;
+            --accent: #00E5FF;
+            --bg-dark: #120E29;
+            --bg-light: #1E1A3C;
+            --text: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text);
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255, 65, 180, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(157, 78, 221, 0.2) 0%, transparent 50%);
+        }
+        
+        h1 {
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 65, 180, 0.5);
+        }
+        
+        .back-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .back-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+        
+        .game-frame {
+            border: 3px solid var(--primary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 65, 180, 0.3);
+        }
+        
+        .loader {
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 5px solid var(--accent);
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 65, 180, 0.7);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 md:mb-0">Girls Games</h1>
+            <a href="index.html" class="back-btn px-6 py-3 rounded-full text-white font-medium flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+                Back to Home
+            </a>
+        </header>
+        
+        <!-- Game Description -->
+        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 glow-text">About Girls Games</h2>
+            <p class="text-gray-300 mb-4">
+                Girls games offer a wide range of fun activities including fashion design, makeup artistry, home decoration, cooking, and much more! These games are perfect for anyone who enjoys creative expression and virtual role-playing activities.
+            </p>
+            <p class="text-gray-300">
+                Explore our collection of beauty and fashion-focused games that will let you express your style and creativity. Design outfits, create stunning makeup looks, decorate dream homes, and more!
+            </p>
+        </div>
+        
+        <!-- Game Frame -->
+        <div class="relative mb-8">
+            <div id="loading" class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 z-10">
+                <div class="loader"></div>
+                <p class="ml-4 text-xl">Loading games...</p>
+            </div>
+            <iframe id="gameFrame" src="https://www.crazygames.com/c/beauty" class="game-frame w-full h-screen md:h-[80vh]" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Game Tips -->
+        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 glow-text">Gaming Tips</h2>
+            <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                <li>Take your time to explore all the customization options in fashion games</li>
+                <li>Save your progress whenever possible in longer games</li>
+                <li>Try different combinations to discover unique looks and designs</li>
+                <li>Challenge yourself to create themed outfits or room designs</li>
+                <li>Share your creations with friends for more fun!</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="mt-20 py-6 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400"><a href="https://beian.miit.gov.cn" rel=nofollow>渝ICP备2025054030号</a>
+            <p class="text-gray-400">Contact Us：961674004@qq.com。</p> 
+        </div>
+    </footer>
+    
+    <script>
+        // Loading animation
+        window.addEventListener('load', function() {
+            document.getElementById('gameFrame').onload = function() {
+                document.getElementById('loading').style.display = 'none';
+            };
+            
+            // Fallback in case iframe takes too long to load
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
